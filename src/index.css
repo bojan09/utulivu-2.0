@@ -174,3 +174,7 @@ a.btn {
     @apply bg-background text-foreground;
   }
 }
+
+[id] {
+  scroll-margin-top: 6.3rem;
+}

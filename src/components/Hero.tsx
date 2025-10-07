@@ -25,12 +25,12 @@ const Hero = () => {
         <Button
           size="lg"
           className={cn(
-            "bg-primary hover:bg-primary/90 text-white font-semibold",
-            "px-6 py-3 sm:px-8 sm:py-4 rounded-full"
+            "bg-primary/80 hover:bg-primary/90 text-white font-semibold",
+            "px-6 py-[2rem] sm:px-5 sm:py-6 rounded-full"
           )}
           asChild
         >
-          <a href="/tours">Explore Tours</a>
+          <a href="#destinations">Explore Destinations</a>
         </Button>
       </div>
     </section>

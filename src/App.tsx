@@ -1,13 +1,23 @@
-import Home from "./sections/Home";
-import About from "./components/About";
-import Navbar from "./components/Navbar";
+import {
+  Home,
+  Destinations,
+  Testimonials,
+  About,
+  Contact,
+  Footer,
+} from "./sections";
+import { Navbar } from "./components";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Home />
+      <Destinations />
+      <Testimonials />
       <About />
+      <Contact />
+      <Footer />
     </div>
   );
 };

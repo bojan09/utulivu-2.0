@@ -5,20 +5,28 @@ import { useState } from "react";
 import { navLinks } from "@/constants";
 
 import { close, hamburger } from "../assets/icons/index";
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <>
       {/* Desktop */}
-      <div className=" md:sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <nav className="container hidden md:flex h-16 max-w-screen-2xl items-center">
-          <ul className="flex flex-1 items-center space-x-4 md:justify-end md:mr-8 md:space-x-6 lg:space-x-8">
+      <div className="sticky top-0 z-50 w-full backdrop-blur-md supports-[backdrop-filter]:bg-background/40 flex items-center justify-center">
+        <a href="/">
+          <img
+            src={logo}
+            className="h-20 w-25 fixed top-1 left-10 "
+            alt="logo"
+          />
+        </a>
+        <nav className="container hidden md:flex h-25 max-w-screen-2xl items-center">
+          <ul className="flex flex-1 items-center space-x-4 md:justify-end md:mr-17 md:space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <a
                 href={link.href}
                 key={link.label}
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
+                className="transition-colors hover:text-foreground/100 text-foreground/70"
               >
                 <li>{link.label}</li>
               </a>
@@ -28,24 +36,40 @@ const Navbar = () => {
       </div>
 
       {/* Mobile */}
-      <nav className="md:hidden fixed top-5 right-6 z-40 flex justify-center items-center flex-col gap-12">
+
+      <nav className="md:hidden fixed top-7 right-7 z-40">
         <img
           src={toggle ? close : hamburger}
           alt="nav"
-          className="w-6 h-6"
+          className={
+            (cn("w-6 h-6"), close ? "fixed top-7 right-7  w-6 h-6 z-40" : "")
+          }
           onClick={() => setToggle(!toggle)}
         />
         <ul
           className={
-            (cn("flex flex-col space-y-0 bg-red-600"),
-            !toggle ? "hidden" : "openMenu")
+            (cn(""),
+            !toggle
+              ? "hidden"
+              : "fixed top-0 right-0 bg-blue-100/20 w-[80%] h-screen flex items-center flex-col gap-6 pt-20 backdrop-blur-md")
           }
         >
           {navLinks.map((link) => (
-            <a href={link.href} key={link.label} className="">
-              <li className="">{link.label}</li>
+            <a
+              href={link.href}
+              key={link.label}
+              onClick={() => setToggle(!toggle)}
+              className="block px-4 py-3"
+            >
+              <li className="text-[18px] font-medium ">{link.label}</li>
             </a>
           ))}
+          <a href="/" className="fixed bottom-12">
+            Utulivu Tours
+          </a>
+          <a className="fixed bottom-5" href="mailto:utulivu.tours@gmail.com">
+            utulivu.tours@gmail.com
+          </a>
         </ul>
       </nav>
     </>
