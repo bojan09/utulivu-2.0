@@ -10,6 +10,10 @@
   --font-secondary: "Lexend", sans-serif; /* Using Lexend for storytelling text */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Apply fonts globally */
 body {
   font-family: var(--font-body);

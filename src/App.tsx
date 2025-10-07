@@ -1,12 +1,12 @@
-import BackgroundVideo from "./components/BackgroundVideo";
-import Hero from "./components/Hero";
+import Home from "./sections/Home";
 import About from "./components/About";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <div>
-      <Hero />
-      <BackgroundVideo />
+      <Navbar />
+      <Home />
       <About />
     </div>
   );

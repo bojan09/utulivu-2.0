@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"; // Shadcn utility for classNames
 import { Button } from "@/components/ui/button"; // Shadcn Button component
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <section className="relative w-full h-screen flex items-center justify-center">
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">

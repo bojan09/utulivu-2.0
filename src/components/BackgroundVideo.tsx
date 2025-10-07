@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils"; // Shadcn utility for classNames
+import { cn } from "@/lib/utils";
 
 import {
   video_1,
@@ -27,7 +27,7 @@ const videoSources = [
   video_10,
 ];
 
-const BackgroundVideo: React.FC = () => {
+const BackgroundVideo = () => {
   const [currentVideo, setCurrentVideo] = useState<string | null>(null);
 
   useEffect(() => {
