@@ -36,6 +36,7 @@ button,
 a.btn {
   font-family: var(--font-cta);
   font-weight: 600; /* Semi-bold for CTAs */
+  cursor: pointer;
 }
 
 .subheading {

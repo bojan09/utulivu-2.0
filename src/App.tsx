@@ -1,28 +1,28 @@
 import { Routes, Route } from "react-router-dom";
 
-import {
-  Home,
-  Destinations,
-  Testimonials,
-  About,
-  Contact,
-  Footer,
-} from "./sections";
-import { Navbar, DestinationDetail } from "./components";
+import { Home, Contact, Footer } from "./sections";
+
+import { Navbar, DestinationDetail, ScrollToTop } from "./components";
 
 const App = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       <Navbar />
-      <Home />
-      <Destinations />
-      <Routes>
-        <Route path="/destinations/:id" element={<DestinationDetail />} />
-      </Routes>
-      <Testimonials />
-      <About />
-      <Contact />
-      <Footer />
+      <main className="pt-16">
+        <ScrollToTop />
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/destinations/:id" element={<DestinationDetail />} />
+          <Route
+            path="*"
+            element={
+              <div className="container mx-auto p-8">404 - Page Not Found</div>
+            }
+          />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </main>
     </div>
   );
 };

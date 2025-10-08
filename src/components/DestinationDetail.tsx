@@ -1,6 +1,8 @@
 // pages/DestinationDetail.tsx
 import { useParams, Link } from "react-router-dom";
-// import { cn } from "@/lib/utils";
+
+import { Destinations } from "@/sections";
+
 import { Button } from "@/components/ui/button";
 
 import { destinationsData } from "@/constants";
@@ -11,21 +13,23 @@ export default function DestinationDetail() {
 
   if (!post) {
     return (
-      <div className="container mx-auto px-4 py-12">
-        <h1 className="text-2xl font-bold">Destination Not Found</h1>
-        <Link to="/tours#destinations">
-          <Button variant="outline" className="mt-4">
-            Back to Destinations
-          </Button>
-        </Link>
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-2xl font-bold">Destination Not Found</h1>
+          <Link to="/#destinations">
+            <Button variant="outline" className="mt-4">
+              Back to Destinations
+            </Button>
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
-    <section className="py-12 bg-background">
-      <div className="container mx-auto px-4">
-        <Link to="/tours#destinations">
+    <div className="min-h-screen bg-background animate-in fade-in duration-500">
+      <div className="container mx-auto px-4 py-12">
+        <Link to="/#destinations">
           <Button variant="ghost" className="mb-4">
             ← Back to Destinations
           </Button>
@@ -68,6 +72,7 @@ export default function DestinationDetail() {
           </Button>
         </div>
       </div>
-    </section>
+      <Destinations />
+    </div>
   );
 }

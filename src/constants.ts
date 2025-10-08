@@ -19,6 +19,7 @@ import {
 
 interface Destination {
   id: number;
+  link: string;
   title: string;
   description: string;
   category: string;
@@ -29,32 +30,36 @@ interface Destination {
 export const destinationsData: Destination[] = [
   {
     id: 1,
+    link: "stone-market-feast",
     title: "Spice Market Feast",
     description:
       "Explore Zanzibar's vibrant spice markets with a guided food tour.",
     category: "Food",
-    image: "https://via.placeholder.com/300x200?text=Spice+Market",
+    image: darjani_spice_market,
     additionalImages: [darjani_spice_market, darjani_spice_market_2],
   },
 
   {
     id: 2,
+    link: "jungle-safari-adventure",
     title: "Jungle Safari Adventure",
     description: "Track wildlife in Zanzibar's lush reserves.",
     category: "Safari",
-    image: "https://via.placeholder.com/300x200?text=Safari",
+    image: street_artist,
     additionalImages: [darjani_spice_market, darjani_spice_market_2],
   },
   {
     id: 3,
+    link: "nungwi-beach-day",
     title: "Nungwi Beach Day",
     description: "Relax on the pristine sands of Nungwi with crystal waters.",
     category: "Beaches",
-    image: "https://via.placeholder.com/300x200?text=Nungwi+Beach",
+    image: sultans_palace,
     additionalImages: [darjani_spice_market, darjani_spice_market_2],
   },
   {
     id: 4,
+    link: "stone-town-exploration",
     title: "Stone Town Exploration",
     description:
       "Wander the labyrinthine alleys of this historic Swahili trading hub, blending Arab, Indian, and European influences with carved doors and coral architecture",
@@ -71,10 +76,11 @@ export const destinationsData: Destination[] = [
   },
   {
     id: 5,
+    link: "seafood-cooking-class",
     title: "Seafood Cooking Class",
     description: "Learn to cook local seafood dishes with expert chefs.",
     category: "Food",
-    image: "https://via.placeholder.com/300x200?text=Seafood+Class",
+    image: old_fort,
     additionalImages: [darjani_spice_market, darjani_spice_market_2],
   },
 ];
