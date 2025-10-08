@@ -1,22 +1,31 @@
-// pages/DestinationDetail.tsx
+import * as React from "react";
 import { useParams, Link } from "react-router-dom";
 
-import { Destinations } from "@/sections";
-
 import { Button } from "@/components/ui/button";
+import { DestinationDetailCarousel } from "./";
 
 import { destinationsData } from "@/constants";
 
 export default function DestinationDetail() {
   const { id } = useParams<{ id: string }>();
   const post = destinationsData.find((p) => p.id === Number(id));
+  const [mainImage, setMainImage] = React.useState<string | undefined>(
+    undefined
+  );
+
+  // Initialize mainImage with post.image when post is found
+  React.useEffect(() => {
+    if (post) {
+      setMainImage(post.image);
+    }
+  }, [post]);
 
   if (!post) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-2xl font-bold">Destination Not Found</h1>
-          <Link to="/#destinations">
+          <Link to="/">
             <Button variant="outline" className="mt-4">
               Back to Destinations
             </Button>
@@ -29,16 +38,16 @@ export default function DestinationDetail() {
   return (
     <div className="min-h-screen bg-background animate-in fade-in duration-500">
       <div className="container mx-auto px-4 py-12">
-        <Link to="/#destinations">
+        <Link to="/">
           <Button variant="ghost" className="mb-4">
             ← Back to Destinations
           </Button>
         </Link>
         <div className="flex flex-col gap-8">
           {/* Hero Image */}
-          <div className="relative rounded-lg overflow-hidden">
+          <div className="relative rounded-lg overflow-hidden transition-all duration-300">
             <img
-              src={post.image}
+              src={mainImage}
               alt={post.title}
               className="w-full h-96 object-cover"
             />
@@ -55,24 +64,13 @@ export default function DestinationDetail() {
             <p className="text-muted-foreground">{post.description}</p>
           </div>
 
-          {/* Image Gallery */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {post.additionalImages.map((img, idx) => (
-              <img
-                key={idx}
-                src={img}
-                alt={`${post.title} ${idx + 1}`}
-                className="w-full h-64 object-cover rounded-lg"
-              />
-            ))}
-          </div>
+          <DestinationDetailCarousel />
 
           <Button asChild variant="outline">
             <Link to="/contact">Book This Experience</Link>
           </Button>
         </div>
       </div>
-      <Destinations />
     </div>
   );
 }
