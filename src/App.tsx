@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+
 import {
   Home,
   Destinations,
@@ -6,7 +8,7 @@ import {
   Contact,
   Footer,
 } from "./sections";
-import { Navbar } from "./components";
+import { Navbar, DestinationDetail } from "./components";
 
 const App = () => {
   return (
@@ -14,6 +16,9 @@ const App = () => {
       <Navbar />
       <Home />
       <Destinations />
+      <Routes>
+        <Route path="/destinations/:id" element={<DestinationDetail />} />
+      </Routes>
       <Testimonials />
       <About />
       <Contact />
