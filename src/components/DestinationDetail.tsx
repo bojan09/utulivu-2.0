@@ -1,9 +1,9 @@
+// pages/DestinationDetail.tsx
 import * as React from "react";
 import { useParams, Link } from "react-router-dom";
-
 import { Button } from "@/components/ui/button";
-import { DestinationDetailCarousel } from "./";
-
+import { ImageCarousel } from "@/components/ImageCarousel";
+import { ImageModal } from "@/components/ImageModal";
 import { destinationsData } from "@/constants";
 
 export default function DestinationDetail() {
@@ -12,20 +12,24 @@ export default function DestinationDetail() {
   const [mainImage, setMainImage] = React.useState<string | undefined>(
     undefined
   );
+  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
 
-  // Initialize mainImage with post.image when post is found
+  // Debug: Log post data to verify
   React.useEffect(() => {
     if (post) {
+      console.log("Post data:", post);
       setMainImage(post.image);
+    } else {
+      console.log("Post not found for id:", id);
     }
-  }, [post]);
+  }, [post, id]);
 
   if (!post) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-2xl font-bold">Destination Not Found</h1>
-          <Link to="/">
+          <Link to="/tours#destinations">
             <Button variant="outline" className="mt-4">
               Back to Destinations
             </Button>
@@ -35,10 +39,13 @@ export default function DestinationDetail() {
     );
   }
 
+  // Combine main image and additionalImages for carousel
+  const carouselImages = [post.image, ...post.additionalImages].slice(0, 6);
+
   return (
     <div className="min-h-screen bg-background animate-in fade-in duration-500">
       <div className="container mx-auto px-4 py-12">
-        <Link to="/">
+        <Link to="/tours#destinations">
           <Button variant="ghost" className="mb-4">
             ← Back to Destinations
           </Button>
@@ -47,7 +54,7 @@ export default function DestinationDetail() {
           {/* Hero Image */}
           <div className="relative rounded-lg overflow-hidden transition-all duration-300">
             <img
-              src={mainImage}
+              src={mainImage || post.image}
               alt={post.title}
               className="w-full h-96 object-cover"
             />
@@ -64,12 +71,31 @@ export default function DestinationDetail() {
             <p className="text-muted-foreground">{post.description}</p>
           </div>
 
-          <DestinationDetailCarousel />
+          {/* Image Carousel */}
+          <ImageCarousel
+            images={carouselImages}
+            onImageClick={(image) => {
+              console.log("Opening modal with image:", image); // Debug
+              setSelectedImage(image);
+              // Optional: Update main image
+              setMainImage(image);
+            }}
+          />
 
           <Button asChild variant="outline">
             <Link to="/contact">Book This Experience</Link>
           </Button>
         </div>
+
+        {/* Image Modal */}
+        {selectedImage && (
+          <ImageModal
+            images={carouselImages}
+            initialImage={selectedImage} // TypeScript now happy since we check selectedImage
+            alt={post.title}
+            onClose={() => setSelectedImage(null)}
+          />
+        )}
       </div>
     </div>
   );
