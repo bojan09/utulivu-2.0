@@ -1,5 +1,4 @@
 // components/ImageCarousel.tsx
-import * as React from "react";
 import Slider from "react-slick";
 
 interface ImageCarouselProps {
@@ -15,14 +14,14 @@ export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
   // Carousel settings
   const sliderSettings = {
     dots: true,
-    infinite: carouselImages.length > 5,
+    infinite: carouselImages.length > 6,
     speed: 500,
-    slidesToShow: Math.min(carouselImages.length, 5),
+    slidesToShow: Math.min(carouselImages.length, 6),
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: Math.min(carouselImages.length, 3) },
+        settings: { slidesToShow: Math.min(carouselImages.length, 5) },
       },
       {
         breakpoint: 640,

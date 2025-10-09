@@ -180,3 +180,18 @@ a.btn {
 [id] {
   scroll-margin-top: 6.3rem;
 }
+
+.slick-track {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 300px;
+  gap: 1rem;
+}
+
+.slick-slider,
+.slick-initialized,
+.slick-list {
+  display: flex;
+  justify-content: start;
+}

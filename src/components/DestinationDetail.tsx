@@ -44,49 +44,52 @@ export default function DestinationDetail() {
 
   return (
     <div className="min-h-screen bg-background animate-in fade-in duration-500">
-      <div className="container mx-auto px-4 py-12">
-        <Link to="/tours#destinations">
+      <div className="container mx-auto px-12 py-12">
+        <Link to="/">
           <Button variant="ghost" className="mb-4">
             ← Back to Destinations
           </Button>
         </Link>
-        <div className="flex flex-col gap-8">
-          {/* Hero Image */}
-          <div className="relative rounded-lg overflow-hidden transition-all duration-300">
-            <img
-              src={mainImage || post.image}
-              alt={post.title}
-              className="w-full h-96 object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-              <h1 className="text-3xl font-bold text-white">{post.title}</h1>
-              <span className="inline-block mt-2 rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-white">
-                {post.category}
-              </span>
+        <div className="md:flex gap-8">
+          {/* Hero Container */}
+          <div className="flex flex-col gap-8">
+            {/* Hero Image */}
+            <div className="relative rounded-lg overflow-hidden transition-all duration-300 md:w-[50vw]">
+              <img
+                src={mainImage || post.image}
+                alt={post.title}
+                className="w-full h-96 object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                <h1 className="text-3xl font-bold text-white">{post.title}</h1>
+                <span className="inline-block mt-2 rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-white">
+                  {post.category}
+                </span>
+              </div>
             </div>
+
+            {/* Image Carousel */}
+            <ImageCarousel
+              images={carouselImages}
+              onImageClick={(image) => {
+                console.log("Opening modal with image:", image); // Debug
+                setSelectedImage(image);
+                // Optional: Update main image
+                setMainImage(image);
+              }}
+            />
           </div>
 
-          {/* Description */}
-          <div className="prose max-w-prose">
-            <p className="text-muted-foreground">{post.description}</p>
+          {/* Description Container */}
+          <div className="flex flex-col">
+            <div className="prose max-w-prose">
+              <p className="text-muted-foreground my-4">{post.description}</p>
+            </div>
+            <Button asChild variant="outline" className="md:w-[10rem] md:px-4">
+              <Link to="/contact">Book This Experience</Link>
+            </Button>
           </div>
-
-          {/* Image Carousel */}
-          <ImageCarousel
-            images={carouselImages}
-            onImageClick={(image) => {
-              console.log("Opening modal with image:", image); // Debug
-              setSelectedImage(image);
-              // Optional: Update main image
-              setMainImage(image);
-            }}
-          />
-
-          <Button asChild variant="outline">
-            <Link to="/contact">Book This Experience</Link>
-          </Button>
         </div>
-
         {/* Image Modal */}
         {selectedImage && (
           <ImageModal

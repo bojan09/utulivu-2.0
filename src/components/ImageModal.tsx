@@ -30,12 +30,12 @@ export function ImageModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 animate-in fade-in duration-300">
-      <div className="relative max-w-4xl w-full mx-4 flex flex-col items-center justify-center">
+      <div className="relative md:max-w-4xl w-full mx-2 md:mx-4 flex flex-col items-center justify-center">
         {/* Close Button */}
         <Button
           variant="ghost"
           size="icon"
-          className="absolute top-4 right-4 text-white hover:bg-white/20"
+          className="absolute md:top-4 top-0 right-0 md:right-4 text-white hover:bg-white/20"
           onClick={onClose}
         >
           <X className="h-6 w-6" />
@@ -47,7 +47,7 @@ export function ImageModal({
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white hover:bg-white/20"
+              className="absolute top-1/2 md:left-4 left-0 transform -translate-y-1/2 text-white hover:bg-white/20"
               onClick={handlePrev}
             >
               <ChevronLeft className="h-8 w-8" />
@@ -55,7 +55,7 @@ export function ImageModal({
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white hover:bg-white/20"
+              className="absolute top-1/2 md:right-4 right-0 transform -translate-y-1/2 text-white hover:bg-white/20"
               onClick={handleNext}
             >
               <ChevronRight className="h-8 w-8" />
@@ -67,7 +67,7 @@ export function ImageModal({
         <img
           src={images[currentIndex]}
           alt={`${alt} ${currentIndex + 1}`}
-          className="w-[50vw] h-[auto] max-h-[80vh] object-contain rounded-lg transition-opacity duration-300"
+          className="md:w-[50vw] w-[80vw]  h-[auto] max-h-[80vh] object-contain rounded-lg transition-opacity duration-300"
         />
       </div>
     </div>
