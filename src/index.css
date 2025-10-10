@@ -195,3 +195,10 @@ a.btn {
   display: flex;
   justify-content: start;
 }
+
+.slick-slide {
+  min-width: 80px;
+}
+.slick-slide img {
+  width: 14rem;
+}

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageModal } from "@/components/ImageModal";
 import { destinationsData } from "@/constants";
+import TourCard from "@/components/TourCard";
 
 export default function DestinationDetail() {
   const { id } = useParams<{ id: string }>();
@@ -54,7 +55,7 @@ export default function DestinationDetail() {
           {/* Hero Container */}
           <div className="flex flex-col gap-8">
             {/* Hero Image */}
-            <div className="relative rounded-lg overflow-hidden transition-all duration-300 md:w-[50vw]">
+            <div className="relative rounded-lg overflow-hidden transition-all duration-300 md:w-[55vw]">
               <img
                 src={mainImage || post.image}
                 alt={post.title}
@@ -74,8 +75,7 @@ export default function DestinationDetail() {
               onImageClick={(image) => {
                 console.log("Opening modal with image:", image); // Debug
                 setSelectedImage(image);
-                // Optional: Update main image
-                setMainImage(image);
+                setMainImage(image); // Optional: Update main image
               }}
             />
           </div>
@@ -85,20 +85,36 @@ export default function DestinationDetail() {
             <div className="prose max-w-prose">
               <p className="text-muted-foreground my-4">{post.description}</p>
             </div>
-            <Button asChild variant="outline" className="md:w-[10rem] md:px-4">
+
+            <Button asChild variant="outline" className="w-[11rem]">
               <Link to="/contact">Book This Experience</Link>
             </Button>
           </div>
         </div>
+
         {/* Image Modal */}
         {selectedImage && (
           <ImageModal
             images={carouselImages}
-            initialImage={selectedImage} // TypeScript now happy since we check selectedImage
+            initialImage={selectedImage}
             alt={post.title}
             onClose={() => setSelectedImage(null)}
           />
         )}
+
+        {/* Tour Card */}
+        <div className="flex items-center justify-center">
+          <TourCard
+            tour={{
+              id: post.id,
+              highlights: post.highlights,
+              description: post.description,
+              includes: post.includes,
+              notSuitableFor: post.notSuitableFor,
+              importantInformation: post.importantInformation,
+            }}
+          />
+        </div>
       </div>
     </div>
   );

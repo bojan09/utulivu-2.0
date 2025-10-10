@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="pt-16">
+      <main className="">
         <ScrollToTop />
         <Routes>
           <Route index path="/" element={<Home />} />

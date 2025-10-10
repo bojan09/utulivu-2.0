@@ -21,7 +21,7 @@ export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: Math.min(carouselImages.length, 5) },
+        settings: { slidesToShow: Math.min(carouselImages.length, 6) },
       },
       {
         breakpoint: 640,
