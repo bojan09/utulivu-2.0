@@ -36,8 +36,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile */}
-
-      <nav className="md:hidden fixed top-7 right-7 z-40">
+      <nav className="md:hidden fixed top-0 right-0 w-full h-24 z-40 backdrop-blur-md supports-[backdrop-filter]:bg-background/40">
         <img
           src={toggle ? close : hamburger}
           alt="nav"
@@ -51,7 +50,7 @@ const Navbar = () => {
             (cn(""),
             !toggle
               ? "hidden"
-              : "fixed top-0 right-0 bg-blue-100/20 w-[80%] h-screen flex items-center flex-col gap-6 pt-20 backdrop-blur-md")
+              : "fixed top-0 right-0 w-[80%] h-screen flex items-center flex-col gap-6 mt-24 supports-[backdrop-filter]:bg-background/80 backdrop-blur-md")
           }
         >
           {navLinks.map((link) => (
@@ -64,12 +63,10 @@ const Navbar = () => {
               <li className="text-[18px] font-medium ">{link.label}</li>
             </a>
           ))}
-          <a href="/" className="fixed bottom-12">
+          <a href="/" className="mt-4">
             Utulivu Tours
           </a>
-          <a className="fixed bottom-5" href="mailto:utulivu.tours@gmail.com">
-            utulivu.tours@gmail.com
-          </a>
+          <a href="mailto:utulivu.tours@gmail.com">utulivu.tours@gmail.com</a>
         </ul>
       </nav>
     </>

@@ -181,12 +181,14 @@ a.btn {
   scroll-margin-top: 6.3rem;
 }
 
-.slick-track {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  width: 300px;
-  gap: 1rem;
+@media (min-width: 450px) {
+  .slick-track {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 300px;
+    gap: 1rem;
+  }
 }
 
 .slick-slider,
