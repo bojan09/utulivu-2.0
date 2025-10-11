@@ -40,7 +40,7 @@ export function YouMightAlsoLike({
               <h4 className="text-lg font-medium text-gray-800">
                 {post.title}
               </h4>
-              <p className="text-sm text-gray-600 line-clamp-3 py-3">
+              <p className="text-sm text-gray-600 md:line-clamp-3 py-3">
                 {post.description}
               </p>
               <span className="inline-block mt-1 rounded-full bg-primary/20 px-2 py-1 text-xs font-medium text-primary">
