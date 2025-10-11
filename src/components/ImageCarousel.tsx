@@ -9,23 +9,28 @@ interface ImageCarouselProps {
 export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
   // Limit to 6 images
   const carouselImages = images.slice(0, 6);
-  console.log("ImageCarousel images:", carouselImages); // Debug: Check images
 
   // Carousel settings
   const sliderSettings = {
     dots: true,
     infinite: carouselImages.length > 6,
     speed: 500,
-    slidesToShow: Math.min(carouselImages.length, 6),
+    slidesToShow: Math.min(carouselImages.length, 6), // Default for desktop
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: Math.min(carouselImages.length, 5) },
+        settings: {
+          slidesToShow: Math.min(carouselImages.length, 3),
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 640,
-        settings: { slidesToShow: Math.min(carouselImages.length, 2) },
+        settings: {
+          slidesToShow: Math.min(carouselImages.length, 2),
+          slidesToScroll: 1,
+        },
       },
     ],
   };
@@ -39,7 +44,6 @@ export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
               key={idx}
               className="px-1 cursor-pointer"
               onClick={() => {
-                console.log("Clicked carousel image:", img); // Debug: Confirm click
                 onImageClick(img);
               }}
             >

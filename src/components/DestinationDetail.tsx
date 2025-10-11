@@ -15,16 +15,6 @@ export default function DestinationDetail() {
   );
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
 
-  // Debug: Log post data to verify
-  React.useEffect(() => {
-    if (post) {
-      console.log("Post data:", post);
-      setMainImage(post.image);
-    } else {
-      console.log("Post not found for id:", id);
-    }
-  }, [post, id]);
-
   if (!post) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -53,7 +43,7 @@ export default function DestinationDetail() {
         </Link>
         <div className="md:flex gap-8">
           {/* Hero Container */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 my-12 md:my-2">
             {/* Hero Image */}
             <div className="relative rounded-lg overflow-hidden transition-all duration-300 md:w-[55vw]">
               <img
@@ -69,11 +59,9 @@ export default function DestinationDetail() {
               </div>
             </div>
 
-            {/* Image Carousel */}
             <ImageCarousel
               images={carouselImages}
               onImageClick={(image) => {
-                console.log("Opening modal with image:", image); // Debug
                 setSelectedImage(image);
                 setMainImage(image); // Optional: Update main image
               }}
@@ -90,6 +78,7 @@ export default function DestinationDetail() {
               <Link to="/contact">Book This Experience</Link>
             </Button>
           </div>
+          {/* Image Carousel */}
         </div>
 
         {/* Image Modal */}
@@ -103,7 +92,7 @@ export default function DestinationDetail() {
         )}
 
         {/* Tour Card */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mt-12 md:mt-2">
           <TourCard
             tour={{
               id: post.id,
