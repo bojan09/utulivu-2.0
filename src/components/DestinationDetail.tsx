@@ -9,6 +9,7 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageModal } from "@/components/ImageModal";
 import { ActivityDetails } from "@/components/ActivityDetails";
 import TourCard from "@/components/TourCard";
+import { YouMightAlsoLike } from "@/components/YouMightAlsoLike";
 
 // data
 import { destinationsData } from "@/constants";
@@ -112,6 +113,9 @@ export default function DestinationDetail() {
             }}
           />
         </div>
+
+        {/* You Might Also Like Section */}
+        <YouMightAlsoLike currentCategory={post.category} currentId={post.id} />
       </div>
     </div>
   );

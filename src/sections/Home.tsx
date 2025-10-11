@@ -2,7 +2,7 @@ import BackgroundVideo from "@/components/BackgroundVideo";
 import Hero from "@/components/Hero";
 
 // sections
-import { Destinations, Testimonials, About, Contact } from "./index";
+import { Destinations, Testimonials, Faq, About, Contact } from "./index";
 
 const Home = () => {
   return (
@@ -11,6 +11,7 @@ const Home = () => {
       <BackgroundVideo />
       <Destinations />
       <Testimonials />
+      <Faq />
       <About />
       <Contact />
     </section>
