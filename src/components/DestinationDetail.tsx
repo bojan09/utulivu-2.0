@@ -1,11 +1,17 @@
-// pages/DestinationDetail.tsx
 import * as React from "react";
 import { useParams, Link } from "react-router-dom";
+
+// ui components
 import { Button } from "@/components/ui/button";
+
+// custom components
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ImageModal } from "@/components/ImageModal";
-import { destinationsData } from "@/constants";
+import { ActivityDetails } from "@/components/ActivityDetails";
 import TourCard from "@/components/TourCard";
+
+// data
+import { destinationsData } from "@/constants";
 
 export default function DestinationDetail() {
   const { id } = useParams<{ id: string }>();
@@ -58,7 +64,7 @@ export default function DestinationDetail() {
                 </span>
               </div>
             </div>
-
+            {/* Image Carousel */}
             <ImageCarousel
               images={carouselImages}
               onImageClick={(image) => {
@@ -69,16 +75,18 @@ export default function DestinationDetail() {
           </div>
 
           {/* Description Container */}
-          <div className="flex flex-col">
+          <div className="flex flex-col justify-center items-center">
             <div className="prose max-w-prose">
               <p className="text-muted-foreground my-4">{post.description}</p>
             </div>
+            {/* Activities Container */}
+            <ActivityDetails />
 
+            {/* Book this Experience - Button */}
             <Button asChild variant="outline" className="w-[11rem]">
               <Link to="/contact">Book This Experience</Link>
             </Button>
           </div>
-          {/* Image Carousel */}
         </div>
 
         {/* Image Modal */}
