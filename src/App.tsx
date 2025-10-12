@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Home, Contact, Footer } from "./sections";
+import { Home, Testimonials, Faq, About, Contact, Footer } from "./sections";
 
 import { Navbar, DestinationDetail, ScrollToTop } from "./components";
 
@@ -19,6 +19,9 @@ const App = () => {
               <div className="container mx-auto p-8">404 - Page Not Found</div>
             }
           />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
