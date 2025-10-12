@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useState, useEffect } from "react";
 
 interface ImageCarouselProps {
   images: string[];
@@ -9,6 +10,15 @@ interface ImageCarouselProps {
 export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
   // Limit to 6 images
   const carouselImages = images.slice(0, 6);
+
+  // Detect mobile for conditional arrows
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Responsive settings
   const responsive = {
@@ -23,20 +33,10 @@ export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
       slidesToSlide: 1,
     },
     mobile: {
-      breakpoint: { max: 640, min: 360 },
+      breakpoint: { max: 640, min: 0 },
       items: Math.min(carouselImages.length, 2),
       slidesToSlide: 1,
     },
-    mobileSmall: {
-      breakpoint: { max: 360, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
-
-  // Conditionally render arrows based on device type
-  const CustomArrow = ({ deviceType }: { deviceType?: string }) => {
-    return null; // Always hide arrows
   };
 
   return (
@@ -46,11 +46,9 @@ export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
           responsive={responsive}
           infinite={carouselImages.length > 1}
           autoPlay={false}
-          arrows
+          arrows={!isMobile} // Hide arrows on mobile
           containerClass="carousel-container"
           itemClass="px-1"
-          customLeftArrow={<CustomArrow />}
-          customRightArrow={<CustomArrow />}
         >
           {carouselImages.map((img, idx) => (
             <div
