@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -41,7 +41,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-12 bg-[--secondary] text-[oklch(0.3 0.06 50)]"
+      className="py-12 bg-amber-100 dark:bg-amber-900 text-stone-800 dark:text-stone-200"
     >
       <div className="container mx-auto px-4 lg:px-12">
         <h2 className="text-3xl font-bold text-center mb-8">
@@ -55,16 +55,20 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="w-full flex-shrink-0 p-6 bg-[--secondary]/80 backdrop-blur-sm border-[--border] animate-fade animate-duration-[1000ms]"
+                className="w-full flex-shrink-0 p-6 bg-amber-50 dark:bg-amber-950 backdrop-blur-sm border-amber-200 dark:border-amber-800 animate-fade animate-duration-[1000ms]"
               >
                 <CardHeader>
-                  <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                  <CardDescription className="text-sm text-[--secondary-foreground]">
+                  <CardTitle className="text-lg text-stone-800 dark:text-stone-200">
+                    {testimonial.name}
+                  </CardTitle>
+                  <CardDescription className="text-sm text-stone-600 dark:text-stone-400">
                     {testimonial.location}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-base mb-2">{testimonial.text}</p>
+                  <p className="text-base mb-2 text-stone-700 dark:text-stone-300">
+                    {testimonial.text}
+                  </p>
                   <div className="flex">
                     {Array.from({ length: 5 }, (_, i) => (
                       <svg
@@ -72,7 +76,7 @@ const Testimonials = () => {
                         className={`w-5 h-5 ${
                           i < testimonial.rating
                             ? "text-yellow-400"
-                            : "text-gray-300"
+                            : "text-gray-300 dark:text-gray-600"
                         }`}
                         fill="currentColor"
                         viewBox="0 0 24 24"
@@ -90,10 +94,10 @@ const Testimonials = () => {
           {testimonials.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-3 h-3 rounded-full transition-colors ${
                 currentIndex === index
-                  ? "bg-[oklch(0.5 0.1 240)]"
-                  : "bg-gray-400"
+                  ? "bg-blue-500 dark:bg-blue-400"
+                  : "bg-gray-400 dark:bg-gray-600"
               }`}
               onClick={() => setCurrentIndex(index)}
             />
