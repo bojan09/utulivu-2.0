@@ -3,11 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Toast } from "../components";
 import emailjs from "@emailjs/browser";
 
-const SERVICE_ID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
-const TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
-const PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -32,11 +33,16 @@ const Contact = () => {
       setSuccess(true);
       formRef.current.reset();
     } catch (err) {
-      setError("Failed to send email. Please try again.");
-      return err;
+      console.log(err);
+      return setError("Failed to send email. Please try again.");
     } finally {
       setLoading(false);
     }
+    console.log(error);
+  };
+
+  const handleCloseToast = () => {
+    setSuccess(false);
   };
 
   return (
@@ -112,8 +118,13 @@ const Contact = () => {
               {/* Contact Form */}
               <div>
                 {success ? (
-                  <div className="p-4 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded-md text-green-800 dark:text-green-200">
-                    Thank you! Your message has been sent successfully.
+                  <div>
+                    <div className="p-4 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded-md text-green-800 dark:text-green-200 text center">
+                      Thank you! Your message has been sent successfully.
+                    </div>
+                    <div>
+                      <Toast show={success} onClose={handleCloseToast} />
+                    </div>
                   </div>
                 ) : (
                   <form
@@ -126,7 +137,7 @@ const Contact = () => {
                       name="user_name"
                       placeholder="Your Name"
                       required
-                      className="text-emerald-800 dark:text-amber-100"
+                      className="text-emerald-800 dark:text-amber-100 capitalize"
                     />
                     <Input
                       type="email"
