@@ -21,6 +21,7 @@ export default function DestinationDetail() {
     undefined
   );
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+  const [isReadMore, setIsReadMore] = React.useState<boolean>(false); // State for Read More
 
   if (!post) {
     return (
@@ -39,6 +40,10 @@ export default function DestinationDetail() {
 
   // Combine main image and additionalImages for carousel
   const carouselImages = [post.image, ...post.additionalImages].slice(0, 6);
+
+  // Split fullDescription at [Read More] for collapsible content
+  const [shortDesc, longDesc] = post.fullDescription.split("[Read More]");
+  const displayDescription = isReadMore ? post.fullDescription : shortDesc;
 
   return (
     <div className="min-h-screen bg-background animate-in fade-in duration-500">
@@ -78,7 +83,16 @@ export default function DestinationDetail() {
           {/* Description Container */}
           <div className="flex flex-col justify-center items-center">
             <div className="prose max-w-prose">
-              <p className="text-muted-foreground my-4">{post.description}</p>
+              <p className="text-muted-foreground my-4">{displayDescription}</p>
+              {longDesc && (
+                <Button
+                  variant="link"
+                  onClick={() => setIsReadMore(!isReadMore)}
+                  className="text-primary hover:text-primary/80 p-0 h-auto"
+                >
+                  {isReadMore ? "Read Less" : "Read More"}
+                </Button>
+              )}
             </div>
             {/* Activities Container */}
             <ActivityDetails />
@@ -106,7 +120,7 @@ export default function DestinationDetail() {
             tour={{
               id: post.id,
               highlights: post.highlights,
-              description: post.description,
+              description: post.description, // Keep original short description
               includes: post.includes,
               notSuitableFor: post.notSuitableFor,
               importantInformation: post.importantInformation,
