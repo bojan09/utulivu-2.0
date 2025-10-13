@@ -122,7 +122,7 @@ const Contact = () => {
                     <div className="p-4 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded-md text-green-800 dark:text-green-200 text center">
                       Thank you! Your message has been sent successfully.
                     </div>
-                    <div>
+                    <div className="mx-auto md:mx-0">
                       <Toast show={success} onClose={handleCloseToast} />
                     </div>
                   </div>
