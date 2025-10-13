@@ -18,7 +18,7 @@ export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
     const handleResize = () => setIsMobile(window.innerWidth < 640);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isMobile]);
 
   // Responsive settings
   const responsive = {
@@ -46,7 +46,7 @@ export function ImageCarousel({ images, onImageClick }: ImageCarouselProps) {
           responsive={responsive}
           infinite={carouselImages.length > 1}
           autoPlay={false}
-          arrows={!isMobile} // Hide arrows on mobile
+          arrows={false} // Hide arrows on mobile
           containerClass="carousel-container"
           itemClass="px-1"
         >

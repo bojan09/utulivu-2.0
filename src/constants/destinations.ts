@@ -1,5 +1,7 @@
 // constants/index.ts
-import spice_market_1 from "../assets/images/destinations/stone-town/darjani-spice-market_2.webp";
+import spice_market_1 from "../assets/images/destinations/stone-town/stone-town.webp";
+
+import img_1 from "../assets/images/destinations/img_1.jpg";
 
 export interface Destination {
   id: number;
@@ -25,7 +27,7 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Explore Zanzibar's vibrant spice markets with a guided food tour. Immerse yourself in the aromas of cloves, cinnamon, and nutmeg, and learn about their historical significance in Zanzibar's trade routes. This experience takes you through bustling markets where traders have exchanged spices for centuries, offering a sensory journey through the island's rich heritage. [Read More] You'll visit local spice farms to see cultivation techniques firsthand, followed by a tasting session of freshly harvested spices, and end with a traditional lunch featuring spiced local dishes, perfect for food lovers and history enthusiasts.",
     category: "Food",
-    image: spice_market_1,
+    image: img_1,
     additionalImages: [spice_market_1, spice_market_1, spice_market_1],
     highlights: [
       "Visit local spice farms",

@@ -41,7 +41,10 @@ const Navbar = () => {
           src={toggle ? close : hamburger}
           alt="nav"
           className={
-            (cn("w-6 h-6"), close ? "fixed top-7 right-7  w-6 h-6 z-40" : "")
+            (cn("w-6 h-6"),
+            close
+              ? "fixed top-7 right-7 w-6 h-6 z-40 hover:cursor-pointer"
+              : "")
           }
           onClick={() => setToggle(!toggle)}
         />

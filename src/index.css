@@ -180,3 +180,25 @@ a.btn {
 [id] {
   scroll-margin-top: 6.3rem;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar - Track */
+::-webkit-scrollbar-track {
+  background-color: oklch(96.2% 0.059 95.617);
+  opacity: 0.33;
+}
+
+/* Scrollbar - Handle */
+::-webkit-scrollbar-thumb {
+  background: oklch(37.8% 0.077 168.94);
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(26.2% 0.051 172.552);
+  cursor: pointer;
+}
