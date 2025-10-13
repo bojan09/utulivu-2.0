@@ -18,7 +18,7 @@ const Toast = ({ show, onClose }: ToastProps) => {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="mt-4 md:mt-0 md:fixed bottom-5 right-5 z-50">
       <div className="bg-orange-100 dark:bg-orange-900 border border-orange-300 dark:border-orange-700 text-orange-800 dark:text-orange-200 p-4 rounded-lg shadow-lg flex items-center justify-between max-w-sm">
         <div>
           <p className="text-xs mt-1">

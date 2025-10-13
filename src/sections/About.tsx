@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mt-[-4rem] pb-16 md:pt-16 bg-amber-50 dark:bg-emerald-950"
+      className="mt-[-4rem] pb-10 md:pt-16 bg-amber-50 dark:bg-emerald-950"
     >
       <div className="container mx-auto px-4 lg:px-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -63,7 +63,7 @@ const About = () => {
             <img
               src={about_img_2}
               alt="Utulivu Tours guide leading a safari group in Tanzania"
-              className="object-contain w-full h-auto max-h-96 md:max-h-[35rem] border-solid border-amber-50 "
+              className="object-contain w-full h-auto max-h-96 md:max-h-[35rem"
             />
           </div>
         </div>

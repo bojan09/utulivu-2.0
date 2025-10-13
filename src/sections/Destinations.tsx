@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { destinationsData } from "@/constants";
+import { destinationsData } from "@/constants/destinations";
 
 import { Button } from "@/components/ui/button";
 

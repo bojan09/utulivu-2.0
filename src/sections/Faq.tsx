@@ -7,7 +7,8 @@ import {
 
 import faq_img from "../assets/images/faq_img.jpg";
 
-import { faqs } from "@/constants";
+// data
+import { faqs } from "@/constants/faqs";
 
 const Faq = () => {
   return (

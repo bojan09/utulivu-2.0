@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { destinationsData } from "@/constants";
+
+import { destinationsData } from "@/constants/destinations";
 
 interface YouMightAlsoLikeProps {
   currentCategory: string;

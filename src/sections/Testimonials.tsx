@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { testimonials } from "@/constants";
+import { testimonials } from "@/constants/testimonials";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

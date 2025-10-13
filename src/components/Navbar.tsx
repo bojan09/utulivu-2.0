@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
-import { navLinks } from "@/constants";
+import { navLinks } from "@/constants/navlinks";
 
 import { close, hamburger } from "../assets/icons/index";
 import logo from "../assets/images/logo.png";

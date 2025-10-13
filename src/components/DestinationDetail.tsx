@@ -12,7 +12,7 @@ import TourCard from "@/components/TourCard";
 import { YouMightAlsoLike } from "@/components/YouMightAlsoLike";
 
 // data
-import { destinationsData } from "@/constants";
+import { destinationsData } from "@/constants/destinations";
 
 export default function DestinationDetail() {
   const { id } = useParams<{ id: string }>();
