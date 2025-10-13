@@ -2,19 +2,22 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { destinationsData } from "@/constants/destinations";
-
 import { Button } from "@/components/ui/button";
 
 const categories = ["All", "Food", "Safari", "Beaches", "Adventures"];
 
 const Destinations = () => {
   const [activeCategory, setActiveCategory] = React.useState<string>("All");
+  const [visibleCount, setVisibleCount] = React.useState<number>(3); // Limit to 6 posts initially
 
-  // Filter posts based on active category
+  // Filter posts based on active category and visible count
   const filteredPosts =
     activeCategory === "All"
-      ? destinationsData
+      ? destinationsData.slice(0, visibleCount) // Limit to visibleCount for "All"
       : destinationsData.filter((post) => post.category === activeCategory);
+
+  const showSeeMore =
+    activeCategory === "All" && visibleCount < destinationsData.length;
 
   return (
     <section id="destinations" className="py-12 bg-background">
@@ -32,7 +35,10 @@ const Destinations = () => {
                   ? "bg-primary text-primary-foreground"
                   : "hover:bg-accent hover:text-accent-foreground"
               )}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                setVisibleCount(6); // Reset visible count when changing category
+              }}
             >
               {category}
             </Button>
@@ -64,8 +70,22 @@ const Destinations = () => {
             </Link>
           ))}
         </div>
+
+        {/* See More Button */}
+        {showSeeMore && (
+          <div className="mt-8 text-center">
+            <Button
+              variant="outline"
+              onClick={() => setVisibleCount((prev) => prev + 6)} // Load 6 more posts
+              className="transition-all duration-300 hover:bg-accent hover:text-accent-foreground"
+            >
+              See More
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
 };
+
 export default Destinations;
