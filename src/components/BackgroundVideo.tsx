@@ -1,31 +1,9 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
-import {
-  video_1,
-  video_2,
-  video_3,
-  video_4,
-  video_5,
-  video_6,
-  video_7,
-  video_8,
-  video_9,
-  video_10,
-} from "../assets/videos/";
+import { video_1, video_2, video_3, video_4 } from "../assets/videos/";
 
-const videoSources = [
-  video_1,
-  video_2,
-  video_3,
-  video_4,
-  video_5,
-  video_6,
-  video_7,
-  video_8,
-  video_9,
-  video_10,
-];
+const videoSources = [video_1, video_2, video_3, video_4];
 
 const BackgroundVideo = () => {
   const [currentVideo, setCurrentVideo] = useState<string | null>(null);

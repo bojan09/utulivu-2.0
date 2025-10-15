@@ -1,7 +1,288 @@
-// constants/index.ts
-import spice_market_1 from "../assets/images/destinations/stone-town/stone-town.webp";
+// images data
 
-import img_1 from "../assets/images/destinations/img_1.jpg";
+// bird-watching-safari
+import {
+  bird_watching_img_1,
+  bird_watching_img_2,
+  bird_watching_img_3,
+  bird_watching_img_4,
+  bird_watching_img_5,
+  bird_watching_img_6,
+} from "@/assets/images/destinations/bird-watching-safari";
+
+// bwejuu-beach-relaxation
+import {
+  bwejuu_beach_img_1,
+  bwejuu_beach_img_2,
+  bwejuu_beach_img_3,
+  bwejuu_beach_img_4,
+  bwejuu_beach_img_5,
+  bwejuu_beach_img_6,
+} from "@/assets/images/destinations/bwejuu-beach-relaxation";
+
+// cave-exploration-tour
+import {
+  cave_exploration_img_1,
+  cave_exploration_img_2,
+  cave_exploration_img_3,
+  cave_exploration_img_4,
+  cave_exploration_img_5,
+  cave_exploration_img_6,
+} from "@/assets/images/destinations/cave-exploration-tour";
+
+// coconut-cousine-experience
+import {
+  coconut_cousine_img_1,
+  coconut_cousine_img_2,
+  coconut_cousine_img_3,
+  coconut_cousine_img_4,
+  coconut_cousine_img_5,
+} from "@/assets/images/destinations/coconut-cousine-experience";
+
+// cycling-through-villages
+import {
+  cycling_through_vilages_img_1,
+  cycling_through_vilages_img_2,
+  cycling_through_vilages_img_3,
+  cycling_through_vilages_img_4,
+  cycling_through_vilages_img_5,
+  cycling_through_vilages_img_6,
+} from "@/assets/images/destinations/cycling-through-villages";
+
+// forest-canopy-walk
+import {
+  forest_canopy_walk_img_1,
+  forest_canopy_walk_img_2,
+  forest_canopy_walk_img_3,
+  forest_canopy_walk_img_4,
+  forest_canopy_walk_img_5,
+  forest_canopy_walk_img_6,
+} from "@/assets/images/destinations/forest-canopy-walk";
+
+// fruit-market-tour
+import {
+  fruit_market_img_1,
+  fruit_market_img_2,
+  fruit_market_img_3,
+  fruit_market_img_4,
+  fruit_market_img_5,
+  fruit_market_img_6,
+} from "@/assets/images/destinations/fruit-market-tour";
+
+// herb-garden-experience
+import {
+  herb_garden_img_1,
+  herb_garden_img_2,
+  herb_garden_img_3,
+  herb_garden_img_4,
+  herb_garden_img_5,
+  herb_garden_img_6,
+} from "@/assets/images/destinations/herb-garden-experience";
+
+// jambini-beach-snorkeling
+import {
+  snorkelling_img_1,
+  snorkelling_img_2,
+  snorkelling_img_3,
+  snorkelling_img_4,
+  snorkelling_img_5,
+  snorkelling_img_6,
+} from "@/assets/images/destinations/jambini-beach-snorkeling";
+
+// jungle-safari-adventure
+import {
+  jungle_safari_img_1,
+  jungle_safari_img_2,
+  jungle_safari_img_3,
+  jungle_safari_img_4,
+  jungle_safari_img_5,
+  jungle_safari_img_6,
+} from "@/assets/images/destinations/jungle-safari-adventure";
+
+// kendwa-beach-retreat
+import {
+  kendawa_beach_img_1,
+  kendawa_beach_img_2,
+  kendawa_beach_img_3,
+  kendawa_beach_img_4,
+  kendawa_beach_img_5,
+  kendawa_beach_img_6,
+} from "@/assets/images/destinations/kendwa-beach-retreat";
+
+// kizimkazi-beach-dolphin-tour
+import {
+  kizimkazi_beach_img_1,
+  kizimkazi_beach_img_2,
+  kizimkazi_beach_img_3,
+  kizimkazi_beach_img_4,
+  kizimkazi_beach_img_5,
+  kizimkazi_beach_img_6,
+} from "@/assets/images/destinations/kizimkazi-beach-dolphin-tour";
+
+// mneba-island-beach-getaway
+import {
+  mnemba_island_img_1,
+  mnemba_island_img_2,
+  mnemba_island_img_3,
+  mnemba_island_img_4,
+  mnemba_island_img_5,
+  mnemba_island_img_6,
+} from "@/assets/images/destinations/mneba-island-beach-getaway";
+
+// nungwi-beach-day
+import {
+  nungwi_beach_img_1,
+  nungwi_beach_img_2,
+  nungwi_beach_img_3,
+  nungwi_beach_img_4,
+  nungwi_beach_img_5,
+  nungwi_beach_img_6,
+} from "@/assets/images/destinations/nungwi-beach-day";
+
+// paje-beach-kite-surfing
+import {
+  kite_surfing_img_1,
+  kite_surfing_img_2,
+  kite_surfing_img_3,
+  kite_surfing_img_4,
+  kite_surfing_img_5,
+  kite_surfing_img_6,
+} from "@/assets/images/destinations/paje-beach-kite-surfing";
+
+// prison-island-kayaking
+import {
+  prison_island_img_1,
+  prison_island_img_2,
+  prison_island_img_3,
+  prison_island_img_4,
+  prison_island_img_5,
+  prison_island_img_6,
+} from "@/assets/images/destinations/prison-island-kayaking";
+
+// river-safari-expedition
+import {
+  river_safari_img_1,
+  river_safari_img_2,
+  river_safari_img_3,
+  river_safari_img_4,
+  river_safari_img_5,
+  river_safari_img_6,
+} from "@/assets/images/destinations/river-safari-expedition";
+
+// rock-climbing-excursion
+import {
+  rock_climbing_img_1,
+  rock_climbing_img_2,
+  rock_climbing_img_3,
+  rock_climbing_img_4,
+  rock_climbing_img_5,
+} from "@/assets/images/destinations/rock-climbing-excursion";
+
+// savannah-game-drive
+import {
+  savannah_img_1,
+  savannah_img_2,
+  savannah_img_3,
+  savannah_img_4,
+  savannah_img_5,
+  savannah_img_6,
+} from "@/assets/images/destinations/savannah-game-drive";
+
+// scuba-diving-adventure
+import {
+  scuba_diving_img_1,
+  scuba_diving_img_2,
+  scuba_diving_img_3,
+  scuba_diving_img_4,
+  scuba_diving_img_5,
+  scuba_diving_img_6,
+} from "@/assets/images/destinations/scuba-diving-adventure";
+
+// seafood-cooking-class
+import {
+  seafood_cooking_class_img_1,
+  seafood_cooking_class_img_2,
+  seafood_cooking_class_img_3,
+  seafood_cooking_class_img_4,
+  seafood_cooking_class_img_5,
+  seafood_cooking_class_img_6,
+} from "@/assets/images/destinations/seafood-cooking-class";
+
+// spice-blending-workshop
+import {
+  spice_workshop_img_1,
+  spice_workshop_img_2,
+  spice_workshop_img_3,
+  spice_workshop_img_4,
+  spice_workshop_img_5,
+  spice_workshop_img_6,
+} from "@/assets/images/destinations/spice-blending-workshop";
+
+// spice-market-feast
+import {
+  spice_market_img_1,
+  spice_market_img_2,
+  spice_market_img_3,
+  spice_market_img_4,
+  spice_market_img_5,
+  spice_market_img_6,
+} from "@/assets/images/destinations/spice-market-feast";
+
+// spice-plantation-tour
+import {
+  spice_plantation_img_1,
+  spice_plantation_img_2,
+  spice_plantation_img_3,
+  spice_plantation_img_4,
+  spice_plantation_img_5,
+  spice_plantation_img_6,
+} from "@/assets/images/destinations/spice-plantation-tour";
+
+// stone-town-exploration
+import {
+  stone_town_img_1,
+  stone_town_img_2,
+  stone_town_img_3,
+  stone_town_img_4,
+  stone_town_img_5,
+  stone_town_img_6,
+} from "@/assets/images/destinations/stone-town-exploration";
+
+// street-food-safari
+import {
+  street_food_img_1,
+  street_food_img_2,
+  street_food_img_3,
+  street_food_img_4,
+  street_food_img_5,
+  street_food_img_6,
+} from "@/assets/images/destinations/street-food-safari";
+
+// wildlife-night-safari
+import {
+  nocturnal_wildlife_img_1,
+  nocturnal_wildlife_img_2,
+  nocturnal_wildlife_img_3,
+  nocturnal_wildlife_img_4,
+  nocturnal_wildlife_img_5,
+  nocturnal_wildlife_img_6,
+} from "@/assets/images/destinations/wildlife-night-safari";
+
+// zanzibari-dessert-workshop
+import {
+  desserts_img_1,
+  desserts_img_2,
+  desserts_img_3,
+  desserts_img_4,
+  desserts_img_5,
+  desserts_img_6,
+} from "@/assets/images/destinations/zanzibari-dessert-workshop";
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////  Data /////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
 
 export interface Destination {
   id: number;
@@ -27,8 +308,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Explore Zanzibar's vibrant spice markets with a guided food tour. Immerse yourself in the aromas of cloves, cinnamon, and nutmeg, and learn about their historical significance in Zanzibar's trade routes. This experience takes you through bustling markets where traders have exchanged spices for centuries, offering a sensory journey through the island's rich heritage. [Read More] You'll visit local spice farms to see cultivation techniques firsthand, followed by a tasting session of freshly harvested spices, and end with a traditional lunch featuring spiced local dishes, perfect for food lovers and history enthusiasts.",
     category: "Food",
-    image: img_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: spice_market_img_1,
+    additionalImages: [
+      spice_market_img_2,
+      spice_market_img_3,
+      spice_market_img_4,
+      spice_market_img_5,
+      spice_market_img_6,
+    ],
     highlights: [
       "Visit local spice farms",
       "Taste authentic Zanzibari spices",
@@ -57,8 +344,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Learn to cook local seafood dishes with expert chefs in a hands-on class. Savor the flavors of Zanzibar's coastal cuisine, blending African and Arab influences. This class is held in a scenic coastal kitchen where you'll master recipes like spicy fish curry. [Read More] You'll use freshly caught seafood, learn traditional cooking methods, and enjoy your creations in a communal meal, with a market visit to select ingredients, ideal for culinary enthusiasts.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: seafood_cooking_class_img_1,
+    additionalImages: [
+      seafood_cooking_class_img_2,
+      seafood_cooking_class_img_3,
+      seafood_cooking_class_img_4,
+      seafood_cooking_class_img_5,
+      seafood_cooking_class_img_6,
+    ],
     highlights: [
       "Hands-on cooking with chefs",
       "Taste Zanzibari seafood dishes",
@@ -87,8 +380,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Embark on a culinary journey through Zanzibar's bustling streets, sampling street food delights like Zanzibari pizza and grilled skewers. This tour takes you to hidden gems where local vendors serve authentic flavors. [Read More] You'll taste a variety of dishes, including spicy samosas and sweet coconut rice, while learning about the street food culture from expert guides, with a nighttime market visit for a vibrant atmosphere.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: street_food_img_1,
+    additionalImages: [
+      street_food_img_2,
+      street_food_img_3,
+      street_food_img_4,
+      street_food_img_5,
+      street_food_img_6,
+    ],
     highlights: [
       "Taste local street food",
       "Explore night markets",
@@ -110,8 +409,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Visit a working spice plantation to see how vanilla, pepper, and cardamom are grown, followed by a tasting session. This tour offers a deep dive into the agricultural heart of Zanzibar. [Read More] You'll explore the plantation's fields, learn about sustainable farming practices, and sample freshly picked spices, concluding with a light snack featuring your tastings, perfect for those interested in botany and cuisine.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: spice_plantation_img_1,
+    additionalImages: [
+      spice_plantation_img_2,
+      spice_plantation_img_3,
+      spice_plantation_img_4,
+      spice_plantation_img_5,
+      spice_plantation_img_6,
+    ],
     highlights: [
       "Tour a spice plantation",
       "Sample fresh spices",
@@ -133,8 +438,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Master the art of making traditional Zanzibari sweets like halwa and mandazi in this interactive workshop. This hands-on session introduces you to local dessert-making. [Read More] You'll learn the secrets of balancing spices and sugar, create your own batch to take home, and enjoy a tasting with tea, suitable for beginners and baking enthusiasts alike.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: desserts_img_1,
+    additionalImages: [
+      desserts_img_2,
+      desserts_img_3,
+      desserts_img_4,
+      desserts_img_5,
+      desserts_img_6,
+    ],
     highlights: [
       "Learn dessert recipes",
       "Hands-on baking",
@@ -156,8 +467,13 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Discover the versatility of coconut in Zanzibari cuisine with a cooking class focusing on coconut curries and desserts. This class showcases coconut's many uses. [Read More] You'll prepare dishes like coconut rice and creamy curries, learn about its cultural significance, and enjoy a full meal, ideal for those with an interest in tropical ingredients.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: coconut_cousine_img_1,
+    additionalImages: [
+      coconut_cousine_img_2,
+      coconut_cousine_img_3,
+      coconut_cousine_img_4,
+      coconut_cousine_img_5,
+    ],
     highlights: [
       "Cook with coconut",
       "Learn traditional recipes",
@@ -179,8 +495,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Cook with fresh herbs from a local garden, exploring flavors like lemongrass and coriander in Zanzibari dishes. This class connects you with nature's flavors. [Read More] You'll harvest herbs yourself, cook a meal infused with their aromas, and learn about their medicinal uses, making it a unique culinary and botanical experience.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: herb_garden_img_1,
+    additionalImages: [
+      herb_garden_img_2,
+      herb_garden_img_3,
+      herb_garden_img_4,
+      herb_garden_img_5,
+      herb_garden_img_6,
+    ],
     highlights: [
       "Harvest fresh herbs",
       "Cook herb-infused meals",
@@ -202,8 +524,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Explore Zanzibar's fruit markets, tasting exotic fruits like jackfruit and mango, with a guided culinary walkthrough. This tour highlights the island's fruit diversity. [Read More] You'll sample rare fruits, learn about their seasonal availability, and enjoy a guided chat with vendors, offering a vibrant taste of local life.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: fruit_market_img_1,
+    additionalImages: [
+      fruit_market_img_2,
+      fruit_market_img_3,
+      fruit_market_img_4,
+      fruit_market_img_5,
+      fruit_market_img_6,
+    ],
     highlights: [
       "Taste exotic fruits",
       "Visit local markets",
@@ -225,8 +553,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Create your own spice blends with expert guidance, learning to mix flavors for cooking or gifting. This workshop dives into the art of spice crafting. [Read More] You'll experiment with combinations like cinnamon and clove, receive expert tips, and take home your custom blends, perfect for culinary creatives.",
     category: "Food",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: spice_workshop_img_1,
+    additionalImages: [
+      spice_workshop_img_2,
+      spice_workshop_img_3,
+      spice_workshop_img_4,
+      spice_workshop_img_5,
+      spice_workshop_img_6,
+    ],
     highlights: [
       "Blend custom spices",
       "Learn mixing techniques",
@@ -250,8 +584,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Track wildlife in Zanzibar's lush reserves, including the rare red colobus monkeys, with expert guides. This safari immerses you in the island's natural beauty. [Read More] You'll traverse dense jungle trails with provided binoculars, learn about the ecosystem from naturalists, and enjoy a rest stop with scenic views, ideal for nature lovers with stamina.",
     category: "Safari",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: jungle_safari_img_1,
+    additionalImages: [
+      jungle_safari_img_2,
+      jungle_safari_img_3,
+      jungle_safari_img_4,
+      jungle_safari_img_5,
+      jungle_safari_img_6,
+    ],
     highlights: [
       "Spot rare red colobus monkeys",
       "Explore dense jungle trails",
@@ -277,8 +617,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Experience a treetop walk through Zanzibar's forest canopy, observing birds and monkeys from above. This elevated adventure offers unique perspectives. [Read More] You'll walk secure platforms with safety gear, learn about canopy species from guides, and enjoy breathtaking views, suitable for those comfortable with heights.",
     category: "Safari",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: forest_canopy_walk_img_1,
+    additionalImages: [
+      forest_canopy_walk_img_2,
+      forest_canopy_walk_img_3,
+      forest_canopy_walk_img_4,
+      forest_canopy_walk_img_5,
+      forest_canopy_walk_img_6,
+    ],
     highlights: [
       "Walk through treetops",
       "Spot exotic birds",
@@ -300,8 +646,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Explore Zanzibar's reserves at night to see nocturnal animals like bush babies and owls. This nighttime tour reveals the jungle's hidden life. [Read More] You'll use flashlights to spot wildlife, listen to expert insights on nocturnal behavior, and enjoy a snack break, perfect for adventure seekers with good night vision.",
     category: "Safari",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: nocturnal_wildlife_img_1,
+    additionalImages: [
+      nocturnal_wildlife_img_2,
+      nocturnal_wildlife_img_3,
+      nocturnal_wildlife_img_4,
+      nocturnal_wildlife_img_5,
+      nocturnal_wildlife_img_6,
+    ],
     highlights: [
       "See nocturnal wildlife",
       "Nighttime jungle tour",
@@ -323,8 +675,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Navigate Zanzibar's rivers by boat, spotting crocodiles and hippos in their natural habitat. This boat tour offers a water-based wildlife adventure. [Read More] You'll glide through serene waters with life jackets, learn about river ecosystems from guides, and enjoy the thrill of wildlife sightings, ideal for those without sea sickness.",
     category: "Safari",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: river_safari_img_1,
+    additionalImages: [
+      river_safari_img_2,
+      river_safari_img_3,
+      river_safari_img_4,
+      river_safari_img_5,
+      river_safari_img_6,
+    ],
     highlights: [
       "Boat ride on rivers",
       "Spot crocodiles and hippos",
@@ -346,8 +704,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Drive through Zanzibar's savannah to observe giraffes, zebras, and antelopes in the wild. This 4x4 tour showcases open landscapes. [Read More] You'll use binoculars for close-up views, learn about savannah wildlife from experts, and stop for a picnic lunch, perfect for photography enthusiasts with sturdy seating.",
     category: "Safari",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: savannah_img_1,
+    additionalImages: [
+      savannah_img_2,
+      savannah_img_3,
+      savannah_img_4,
+      savannah_img_5,
+      savannah_img_6,
+    ],
     highlights: [
       "See giraffes and zebras",
       "Game drive experience",
@@ -369,8 +733,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Join a guided safari to spot over 100 bird species in Zanzibar's wetlands and forests. This tour is a paradise for bird lovers. [Read More] You'll use provided binoculars to identify species, listen to bird calls with expert guidance, and explore diverse habitats, ideal for those with an interest in ornithology.",
     category: "Safari",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: bird_watching_img_1,
+    additionalImages: [
+      bird_watching_img_2,
+      bird_watching_img_3,
+      bird_watching_img_4,
+      bird_watching_img_5,
+      bird_watching_img_6,
+    ],
     highlights: [
       "Spot 100+ bird species",
       "Explore wetlands",
@@ -394,8 +764,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Relax on the pristine sands of Nungwi with crystal waters perfect for swimming or paddleboarding. This beach day offers a perfect escape. [Read More] You'll have access to paddleboards, enjoy beachside cafes, and watch stunning sunsets, with a safety briefing and lunch included, ideal for relaxation seekers with supervision for non-swimmers.",
     category: "Beaches",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: nungwi_beach_img_1,
+    additionalImages: [
+      nungwi_beach_img_2,
+      nungwi_beach_img_3,
+      nungwi_beach_img_4,
+      nungwi_beach_img_5,
+      nungwi_beach_img_6,
+    ],
     highlights: [
       "Swim in crystal-clear waters",
       "Try paddleboarding",
@@ -424,8 +800,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Unwind at Kendwa Beach with its famous full-moon parties and serene daytime vibes. This retreat offers a unique beach experience. [Read More] You'll enjoy the full-moon party atmosphere, relax on white sands, and swim in calm waters, with snacks provided, suitable for those tolerant of noise.",
     category: "Beaches",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: kendawa_beach_img_1,
+    additionalImages: [
+      kendawa_beach_img_2,
+      kendawa_beach_img_3,
+      kendawa_beach_img_4,
+      kendawa_beach_img_5,
+      kendawa_beach_img_6,
+    ],
     highlights: [
       "Enjoy full-moon parties",
       "Relax on white sands",
@@ -447,8 +829,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Experience kite surfing on Paje Beach's ideal winds, with lessons for all skill levels. This session taps into the beach's natural conditions. [Read More] You'll receive personalized instruction, use top-quality equipment, and enjoy beach views, perfect for adventure seekers without back injuries.",
     category: "Beaches",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: kite_surfing_img_1,
+    additionalImages: [
+      kite_surfing_img_2,
+      kite_surfing_img_3,
+      kite_surfing_img_4,
+      kite_surfing_img_5,
+      kite_surfing_img_6,
+    ],
     highlights: ["Learn kite surfing", "Ride ideal waves", "Enjoy beach views"],
     includes: ["Lesson", "Equipment", "Instructor"],
     notSuitableFor: ["Back injuries", "Non-swimmers"],
@@ -466,8 +854,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Snorkel in Jambiani's coral reefs, discovering vibrant marine life and underwater beauty. This tour explores underwater wonders. [Read More] You'll use provided gear, follow a guided tour to see colorful fish, and learn about coral preservation, ideal for those without ear infections.",
     category: "Beaches",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: snorkelling_img_1,
+    additionalImages: [
+      snorkelling_img_2,
+      snorkelling_img_3,
+      snorkelling_img_4,
+      snorkelling_img_5,
+      snorkelling_img_6,
+    ],
     highlights: [
       "Snorkel coral reefs",
       "See marine life",
@@ -489,8 +883,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Enjoy a quiet day at Bwejuu Beach, perfect for sunbathing and beach walks. This retreat offers a peaceful seaside escape. [Read More] You'll have a lounge chair, take leisurely walks along the shore, and relax with water provided, suitable for those without sun sensitivity.",
     category: "Beaches",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: bwejuu_beach_img_1,
+    additionalImages: [
+      bwejuu_beach_img_2,
+      bwejuu_beach_img_3,
+      bwejuu_beach_img_4,
+      bwejuu_beach_img_5,
+      bwejuu_beach_img_6,
+    ],
     highlights: [
       "Sunbathe on quiet sands",
       "Take beach walks",
@@ -512,8 +912,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Swim with dolphins off Kizimkazi Beach, guided by experts in a safe environment. This tour offers a marine adventure. [Read More] You'll take a boat to dolphin habitats, swim with guidance, and learn about marine conservation, ideal for those without sea sickness.",
     category: "Beaches",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: kizimkazi_beach_img_1,
+    additionalImages: [
+      kizimkazi_beach_img_2,
+      kizimkazi_beach_img_3,
+      kizimkazi_beach_img_4,
+      kizimkazi_beach_img_5,
+      kizimkazi_beach_img_6,
+    ],
     highlights: [
       "Swim with dolphins",
       "Guided boat tour",
@@ -535,8 +941,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Visit Mnemba Island for a private beach experience with snorkeling and seclusion. This getaway offers exclusivity. [Read More] You'll take a boat transfer, snorkel in clear waters, and enjoy a secluded lunch, perfect for those seeking privacy without mobility issues.",
     category: "Beaches",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: mnemba_island_img_1,
+    additionalImages: [
+      mnemba_island_img_2,
+      mnemba_island_img_3,
+      mnemba_island_img_4,
+      mnemba_island_img_5,
+      mnemba_island_img_6,
+    ],
     highlights: [
       "Private beach access",
       "Snorkel clear waters",
@@ -560,8 +972,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Dive into the historic heart of Zanzibar with a thrilling tour through Stone Town's UNESCO-listed alleys. This walk explores cultural landmarks. [Read More] You'll visit the House of Wonders, learn about Swahili architecture, and interact with local artisans, ideal for those comfortable with walking and crowds.",
     category: "Adventures",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: stone_town_img_1,
+    additionalImages: [
+      stone_town_img_2,
+      stone_town_img_3,
+      stone_town_img_4,
+      stone_town_img_5,
+      stone_town_img_6,
+    ],
     highlights: [
       "Explore UNESCO-listed alleys",
       "Visit the House of Wonders",
@@ -586,8 +1004,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Kayak to Prison Island, exploring its history and spotting giant tortoises. This water adventure combines exercise and discovery. [Read More] You'll paddle with a guide, learn about the island's past, and observe tortoises up close, suitable for those without back issues.",
     category: "Adventures",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: prison_island_img_1,
+    additionalImages: [
+      prison_island_img_2,
+      prison_island_img_3,
+      prison_island_img_4,
+      prison_island_img_5,
+      prison_island_img_6,
+    ],
     highlights: [
       "Kayak to Prison Island",
       "See giant tortoises",
@@ -605,12 +1029,17 @@ export const destinationsData: Destination[] = [
     id: 25,
     title: "Rock Climbing Excursion",
     description:
-      "Climb Zanzibar's coastal cliffs with expert guidance and stunning ocean views.",
+      "Climb Zanzibar's cliffs with expert guidance and stunning ocean views.",
     fullDescription:
-      "Climb Zanzibar's coastal cliffs with expert guidance and stunning ocean views. This challenge offers breathtaking scenery. [Read More] You'll use climbing gear, receive safety training, and enjoy ocean vistas, perfect for thrill-seekers without a fear of heights.",
+      "Climb Zanzibar's cliffs with expert guidance and stunning ocean views. This challenge offers breathtaking scenery. [Read More] You'll use climbing gear, receive safety training, and enjoy ocean vistas, perfect for thrill-seekers without a fear of heights.",
     category: "Adventures",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: rock_climbing_img_1,
+    additionalImages: [
+      rock_climbing_img_2,
+      rock_climbing_img_3,
+      rock_climbing_img_4,
+      rock_climbing_img_5,
+    ],
     highlights: [
       "Climb coastal cliffs",
       "Enjoy ocean views",
@@ -632,8 +1061,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Cycle through Zanzibar's rural villages, experiencing local life and landscapes. This ride offers cultural immersion. [Read More] You'll pedal through scenic routes, meet villagers, and learn about rural traditions, ideal for those without knee injuries.",
     category: "Adventures",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: cycling_through_vilages_img_1,
+    additionalImages: [
+      cycling_through_vilages_img_2,
+      cycling_through_vilages_img_3,
+      cycling_through_vilages_img_4,
+      cycling_through_vilages_img_5,
+      cycling_through_vilages_img_6,
+    ],
     highlights: [
       "Cycle rural routes",
       "Meet local villagers",
@@ -655,8 +1090,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Explore Zanzibar's hidden caves, discovering stalactites and ancient artifacts. This tour unveils underground mysteries. [Read More] You'll navigate with helmets and flashlights, learn about geological formations, and hear historical tales, suitable for those without claustrophobia.",
     category: "Adventures",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: cave_exploration_img_1,
+    additionalImages: [
+      cave_exploration_img_2,
+      cave_exploration_img_3,
+      cave_exploration_img_4,
+      cave_exploration_img_5,
+      cave_exploration_img_6,
+    ],
     highlights: [
       "Discover hidden caves",
       "See stalactites",
@@ -678,8 +1119,14 @@ export const destinationsData: Destination[] = [
     fullDescription:
       "Dive into Zanzibar's underwater world, exploring coral reefs and marine biodiversity. This dive offers an aquatic journey. [Read More] You'll use provided gear, follow an instructor to see vibrant marine life, and learn about reef conservation, ideal for those without ear issues.",
     category: "Adventures",
-    image: spice_market_1,
-    additionalImages: [spice_market_1, spice_market_1, spice_market_1],
+    image: scuba_diving_img_1,
+    additionalImages: [
+      scuba_diving_img_2,
+      scuba_diving_img_3,
+      scuba_diving_img_4,
+      scuba_diving_img_5,
+      scuba_diving_img_6,
+    ],
     highlights: [
       "Dive coral reefs",
       "See marine biodiversity",
