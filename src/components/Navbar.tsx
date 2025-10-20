@@ -5,7 +5,8 @@ import { useState } from "react";
 import { navLinks } from "@/constants/navlinks";
 
 import { close, hamburger } from "../assets/icons/index";
-import logo from "../assets/images/logo.png";
+// import logo from "../assets/images/logo.png";
+import logo_v2 from "../assets/images/logo_v2.png";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
       <div className="sticky top-0 z-50 w-full backdrop-blur-md supports-[backdrop-filter]:bg-background/40 flex items-center justify-center">
         <a href="/">
           <img
-            src={logo}
+            src={logo_v2}
             className="h-20 w-25 fixed top-1 left-10 "
             alt="logo"
           />
