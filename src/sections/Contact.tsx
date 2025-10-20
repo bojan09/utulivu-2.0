@@ -78,7 +78,7 @@ const Contact = () => {
                         Email
                       </p>
                       <p className="text-sm text-emerald-700 dark:text-amber-300">
-                        info@utulivutours.com
+                        utulivutours@gmail.com
                       </p>
                     </div>
                   </div>

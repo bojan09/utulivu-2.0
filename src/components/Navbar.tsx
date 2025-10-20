@@ -69,7 +69,7 @@ const Navbar = () => {
           <a href="/" className="mt-4">
             Utulivu Tours
           </a>
-          <a href="mailto:utulivu.tours@gmail.com">utulivu.tours@gmail.com</a>
+          <a href="mailto:utulivu.tours@gmail.com">utulivutours@gmail.com</a>
         </ul>
       </nav>
     </>
