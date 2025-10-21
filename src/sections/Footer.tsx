@@ -120,7 +120,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-emerald-800 dark:border-emerald-700 text-center text-xs text-amber-200 dark:text-amber-100">
           <p>
             &copy; {new Date().getFullYear()} Utulivu Tours. All rights
-            reserved. | Designed and Coded by Bojan S.
+            reserved. | Designed and Coded by
+            <a href="https://b-web-solutions.vercel.app/" target="_blank">
+              Bojan S.
+            </a>
           </p>
         </div>
       </div>
