@@ -122,7 +122,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Utulivu Tours. All rights
             reserved. | Designed and Coded by
             <a href="https://b-web-solutions.vercel.app/" target="_blank">
-              Bojan S.
+              {" "}
+              <strong>Bojan S.</strong>
             </a>
           </p>
         </div>
