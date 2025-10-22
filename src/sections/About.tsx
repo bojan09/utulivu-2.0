@@ -16,8 +16,8 @@ const About = () => {
               About Utulivu Tours
             </h2>
             <p className="text-lg text-emerald-800 dark:text-amber-200">
-              Founded in 2015 in Arusha, Tanzania, Utulivu Tours is dedicated to
-              creating serene and authentic travel experiences across East
+              Founded in 2018 in Zanzibar, Tanzania, Utulivu Tours is dedicated
+              to creating serene and authentic travel experiences across East
               Africa's breathtaking landscapes. "Utulivu" means peace in
               Swahili, reflecting our commitment to mindful, sustainable
               tourism.
@@ -39,7 +39,7 @@ const About = () => {
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-emerald-600 dark:text-amber-400">
-                  50+
+                  30+
                 </p>
                 <p className="text-sm text-emerald-700 dark:text-amber-300">
                   Destinations
@@ -47,7 +47,7 @@ const About = () => {
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-emerald-600 dark:text-amber-400">
-                  10+
+                  8+
                 </p>
                 <p className="text-sm text-emerald-700 dark:text-amber-300">
                   Years Experience

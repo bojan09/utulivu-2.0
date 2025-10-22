@@ -67,13 +67,22 @@ const Footer = () => {
               href="mailto:utulivutours@gmail.com"
               className="text-sm text-amber-100 dark:text-amber-50"
             >
-              Email: utulivutours@gmail.com
+              <strong className="text-amber-200">Email:</strong>{" "}
+              utulivutours@gmail.com
             </a>
             <p className="text-sm text-amber-100 dark:text-amber-50 mt-3">
-              Phone: +1-800-UTULIVU
+              <strong className="text-amber-200">Phone:</strong> +44 7446 046204
+            </p>
+            <p className="text-sm text-amber-100 dark:text-amber-50 mt-3">
+              <strong className="text-amber-200">Local:</strong> +255 772 412829
+            </p>
+            <p className="text-sm text-amber-100 dark:text-amber-50 mt-3">
+              <strong className="text-amber-200">WhatsApp:</strong> +971 581
+              603381
             </p>
             <p className="text-sm text-amber-100 dark:text-amber-50">
-              Address: 123 Serenity Lane, Arusha, Tanzania
+              <strong className="text-amber-200">Address:</strong> Stone
+              Town,Zanzibar
             </p>
           </div>
 
@@ -99,7 +108,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/utulivusafari?utm_source=qr&igsh=MXRhanV5dXk1YjRnOQ%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-100 dark:text-amber-50 hover:text-amber-400 hover:scale-110 transition-all duration-200"
