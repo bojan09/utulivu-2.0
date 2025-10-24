@@ -28,7 +28,7 @@ export function YouMightAlsoLike({
         {similarPosts.map((post, index) => (
           <Link
             key={post.id}
-            to={`/destination/${post.id}`}
+            to={`/destinations/${post.id}`}
             className="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105 animate-[slide-up_0.5s_ease-out_forwards] animate-delay-[0.1s]"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
