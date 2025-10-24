@@ -46,7 +46,7 @@ export default function DestinationDetail() {
   const displayDescription = isReadMore ? post.fullDescription : shortDesc;
 
   return (
-    <div className="min-h-screen bg-background animate-in fade-in duration-500">
+    <div className="min-h-screen animate-in fade-in duration-500 bg-amber-50 dark:bg-amber-900">
       <div className="container mx-auto px-12 py-12">
         <Link to="/">
           <Button variant="ghost" className="mb-4">

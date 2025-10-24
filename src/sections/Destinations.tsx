@@ -20,7 +20,7 @@ const Destinations = () => {
     activeCategory === "All" && visibleCount < destinationsData.length;
 
   return (
-    <section id="destinations" className="py-12 bg-background">
+    <section id="destinations" className="py-12 bg-amber-50 dark:bg-amber-900">
       <div className="container mx-auto px-4">
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop */}
-      <div className="sticky top-0 z-50 w-full backdrop-blur-md supports-[backdrop-filter]:bg-background/40 flex items-center justify-center">
+      <div className="sticky top-0 z-50 w-full backdrop-blur-md supports-[backdrop-filter]:bg-amber-50/40 flex items-center justify-center">
         <a href="/">
           <img
             src={logo_v2}
